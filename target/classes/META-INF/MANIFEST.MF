@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: project-upp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: zlatanp
+Implementation-Vendor-Id: upp
+Build-Jdk: 1.8.0_181
+Implementation-URL: http://projects.spring.io/spring-boot/project-upp/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

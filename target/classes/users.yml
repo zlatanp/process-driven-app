@@ -1,0 +1,71 @@
+id: gigatron
+firstName: Gigatron
+lastName: Gigatronovic
+email: gigatron@localhost
+password: gigatron
+groups:
+ - id: pravno
+---
+id: winwin
+firstName: Win
+lastName: Winner
+email: winwin@localhost
+password: winwin
+groups:
+ - id: pravno
+---
+id: caribic
+firstName: Jovan
+lastName: Jovanovic
+email: caribic@localhost
+password: caribic
+groups:
+ - id: pravno
+---
+id: golub
+firstName: Golub
+lastName: Golubic
+email: golub@localhost
+password: golub
+groups:
+ - id: pravno
+---
+id: viva
+firstName: Viva
+lastName: Vivic
+email: viva@localhost
+password: viva
+groups:
+ - id: pravno
+---
+id: nisekspres
+firstName: Nis
+lastName: Nisic
+email: nisekspres@localhost
+password: nisekspres
+groups:
+ - id: pravno
+---
+id: interkop
+firstName: Mark
+lastName: Twen
+email: interkop@localhost
+password: interkop
+groups:
+ - id: pravno
+---
+id: test
+firstName: Test
+lastName: Tester
+email: test@localhost
+password: test
+groups:
+ - id: fizicko
+---
+id: pera
+firstName: Pera
+lastName: Peric
+email: pera@localhost
+password: pera
+groups:
+ - id: fizicko

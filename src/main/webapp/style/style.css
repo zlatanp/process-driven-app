@@ -1,0 +1,47 @@
+body {background-color: #d3d7cf;}
+
+.ams-welcome-banner{
+    background-color: #d3d7cf;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+.ams-registration-msg{
+    padding-left: 30%;
+    padding-top: 5%;
+    font-size: small;
+    font-style: italic;
+}
+
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 768px){
+    .modal-dialog {
+        right: auto;
+        left: 0;
+    }
+}
+
+
+.ams-form-title{
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPP</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" href="css/jquery-ui.structure.css" />
+	<link rel="stylesheet" href="css/jquery-ui.theme.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/toastr.css" />
+
+	<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui.js"></script>
+	<script type="text/javascript" src="lib/toastr.js"></script>
+	
+    <!--Custom style-->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!--Custom JS-->
+    <script src="js/validation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/auction.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse mainNavbar">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img alt="Brand"
+					src="images/logo.png" width="30px" height="30px">AMS</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" id="userLabel"></a></li>
+					<li><a href='#' class="navbar-brand searchPage"><span class="glyphicon glyphicon-search"></span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-envelope message"></span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-bell notify"></span></a></li>
+					<li><a href="#" id="logoutBtn">Log out</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+<div id="loginDiv">
+    <div class="col-sm-6 col-sm-offset-3 ams-welcome-banner">
+        <h2 style="text-align: center">Auction management system</h2>
+        <p/>
+    </div>
+    <div class="col-sm-5" style="padding-top: 2%; margin-left: 30%">
+        <form class="form-horizontal" id="loginForm" onsubmit="return false">
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Korisničko ime:</label>
+                    <div class="col-sm-6">
+                        <input class="pull-right form-control" type="text"
+                               name="username" id="logusername">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Lozinka:</label>
+                    <div class="col-sm-6">
+                        <input class="pull-right form-control" type="password"
+                               name="password" id="logpassword">
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-success" id="loginBtn">Login</button>
+                </div>
+            </fieldset>
+        </form>
+        <p class="ams-registration-msg"><b>Registrujte se <a href="#" id="registerBtn">ovde</a></b></p>
+    </div>
+</div>
+
+
+<div id="mainDiv">
+    <p><a href="#" id="pokreniAukcije">Podnesite zahtev</a></p>
+    <p><a href="#" id="getZadaciLogovani">Proverite zadatke koji su vam dodeljeni</a></p>
+    
+    <div id="divZahtevAukcija" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Podnesite zahtev za nabavku robe ili usluge</b></h5>
+    	<form id="formaZahtevAukcija" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaManjiBr" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Ne postoji dovoljan broj firmi u sistemu za vaš zahtev.</b></h5>
+    	<form id="formaOdlukaManjiBr" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaOPonudiAgent" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Odluka o prihvatanju ponude koju ste dobili na mail.</b></h5>
+    	<form id="formaOdlukaOPonudiAgent" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divPopunjavanjePonudeAgent" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Popunjavanje ponude</b></h5>
+    	<form id="formaPopunjavanjePonudeAgent" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divUvidUStanjeAgent" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Uvid u stanje ponude</b></h5>
+    	<form id="formaUvidUStanjeAgent" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divPromenaPonudeAgent" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Izmena ponude</b></h5>    	
+    	<form id="formaPromenaPonudeAgent" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaProsiriFirme" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Da li želite da se zahtev proširi na još firmi?</b></h5>    	
+    	<form id="formaOdlukaProsiriFirme" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaNijednaPonuda" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Nema pristiglih ponuda za posao</b></h5>    	
+    	<form id="formaOdlukaNijednaPonuda"" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaProduziRok" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Produzenje roka za prikupljanje ponuda</b></h5>    	
+    	<form id="formaOdlukaProduziRok" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divPanelPonuda" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Prrikaz pristiglih ponuda</b></h5> 
+    	<p id="panelPonudaTaskId"></p>   	
+    	<div id="ponudeKontejner">
+    	</div>
+    	<p>Ako ne želite nijednu ponudu da odaberete od ponuđenih kliknite <a href="#" id="odbijaPonude">ovde</a></p>
+    </div>
+    
+    <div id="divOdlukaOOdustanku" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Odluka o odustanku</b></h5>    	
+    	<form id="formaOdlukaOOdustanku" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaDodatniInfo" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Dodatne informacije</b></h5>    	
+    	<form id="formaOdlukaDodatniInfo" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOdlukaPoslePojasnjenja" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Odluka o ponudi nakon pojasnjenja</b></h5>    	
+    	<form id="formaOdlukaPoslePojasnjenja" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divPrihvatanjePosla" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Prihvatanje posla</b></h5>    	
+    	<form id="formaPrihvatanjePosla" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOcenaKlijenta" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Ocenjivanje klijenta</b></h5>    	
+    	<form id="formaOcenaKlijenta" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="divOcenaAgenta" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<h5 class="ams-form-title"><b>Ocenjivanje agenta i potvrda o zavrsenom poslu</b></h5>    	
+    	<form id="formaOcenaAgenta" class="form-horizontal" onsubmit="return false">
+    	</form>
+    </div>
+    
+    <div id="panelPojasnjenje" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<div class="form-group">
+  			<label for="zahtevPojasnjenje">Unesite zahtev za pojasnjenje:</label>
+  			<textarea class="form-control" rows="5" id="zahtevPojasnjenje"></textarea>
+		</div>
+		<p id="potvrdiZahtevZaPojasnjenjeId"></p>
+		<button class="btn btn-success" id="potvrdiZahtevZaPojasnjenje">Potvrdi</button>
+    </div>
+    
+    <div id="panelPojasnjenjeOdgovor" class="col-sm-6 col-sm-offset-3 ams-user-task-form">
+    	<div class="form-group">
+  			<label for="zahtevPojasnjenjeOdg">Unesite odgovor na zahtev:</label>
+  			<textarea class="form-control" rows="5" id="zahtevPojasnjenjeOdg"></textarea>
+		</div>
+		<p id="prilozenZahtev"></p>
+		<p id="potvrdiZahtevZaPojasnjenjeOdgId"></p>
+		<button class="btn btn-success" id="potvrdiZahtevZaPojasnjenjeOdg">Potvrdi</button>
+    </div>
+</div>
+
+
+<!-- 	MODAL DIALOG REGISTRATION -->
+<div id="modalRegister" class="modal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close close_link" data-dismiss="modal"
+                        aria-hidden="true">&times;
+                </button>
+                <h4>Registracija korisnika</h4>
+                <h6>Možete se registrovati kao fizičko lice ili kao pravno lice (agent firme).</h6>
+                <h6>Korisničko ime i email moraju biti jedinstveni.</h6>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-horizontal"
+                      id="registerUserForm">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
